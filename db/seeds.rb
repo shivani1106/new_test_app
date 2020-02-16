@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+starplus = TvChannel.create(name: "StarPlus")
+	starplus.create(name: 'Dance+', timing: '12:00')
+	starplus.create(name: 'Yeh Rishta Kya Kehlata Hai', timing: '12:00')

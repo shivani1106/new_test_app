@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200216135649) do
+ActiveRecord::Schema.define(version: 20200216150431) do
+
+  create_table "tv_channels", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tv_shows", force: :cascade do |t|
+    t.string   "name"
+    t.time     "timing"
+    t.integer  "tv_channel_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["tv_channel_id"], name: "index_tv_shows_on_tv_channel_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
