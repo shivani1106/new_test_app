@@ -1,25 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class= "welcome-home">
+  <h1>TV Shows</h1>
 
-<h1>Tv Shows</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Timing</th>
-      <th>TV-Channel</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tv_shows.each do |tv_show| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= tv_show.name %></td>
-        <td><%= tv_show.timing %></td>
-        <td><%= tv_show.tv_channel %></td>
+        <th>Name</th>
+        <th>Timing</th>
+        <th>TV-Channel</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @tv_shows.each do |tv_show| %>
+        <tr>
+          <td><%= tv_show.name %></td>
+          <td><%= tv_show.timing %></td>
+          <td><%= tv_show.tv_channel.name%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>  
 
