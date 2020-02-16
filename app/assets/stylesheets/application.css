@@ -16,12 +16,12 @@
 body {
   background: darkgray;
 }
-div#user_nav {
+#user_nav {
   background: gainsboro;
   padding: 15px 0 15px 0;
   font-size: 18px;
-  a.navbar-link {
-    float: right;
-    padding: 0 15px 0 15px;
-  }
+}
+#user_nav .navbar-link {
+  float: right;
+  padding: 0 15px 0 15px;
 }
